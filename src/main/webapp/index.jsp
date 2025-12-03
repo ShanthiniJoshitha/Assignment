@@ -31,3 +31,5 @@ docker run -it -d -p 5000:8080 -v /var/run/docker.sock:/var/run/docker.sock dock
   219  docker service rm pz
   220  docker service create --replicas=3 --constraint="node.id==x1" nginx
 
+kubeadm join 172.16.40.147:6443 --token q40wp6.6vzgaeoxo590aqeg \
+	--discovery-token-ca-cert-hash sha256:f6a6acf505bb30a9f646c298edb86b0de7fc0c8b7307c85f6005311095edfeb
